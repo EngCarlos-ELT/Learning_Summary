@@ -7,8 +7,18 @@
 #include <chrono>
 #include <exception>
 #include <memory>
+#include <fstream>  // Include file stream headers
 
 using namespace std;
+
+// Template function for finding max value
+template <typename T>
+T maxVal(T a, T b) { return (a > b) ? a : b; }
+
+// Define the namespace outside the main function
+namespace myNamespace {
+    void greet() { cout << "Hello from myNamespace!" << endl; }
+}
 
 int main() {
     cout << "1- Basic Data Types in C++\n";
@@ -106,8 +116,6 @@ int main() {
 
     // 11. Templates
     cout << "\n11- Templates\n";
-    template <typename T>
-    T maxVal(T a, T b) { return (a > b) ? a : b; }
     cout << "Max: " << maxVal(5, 10) << endl;
 
     // 12. STL Algorithms
@@ -129,9 +137,6 @@ int main() {
 
     // 15. Namespaces
     cout << "\n15- Namespaces\n";
-    namespace myNamespace {
-        void greet() { cout << "Hello from myNamespace!" << endl; }
-    }
     myNamespace::greet();
 
     // 16. File I/O
@@ -145,5 +150,8 @@ int main() {
     cout << "File Content: " << content << endl;
     inFile.close();
 
+    // Wait for the user to press Enter before closing the console window
+    cout << "\nPress Enter to exit...";
+    cin.get();  // Wait for user input
     return 0;
 }
