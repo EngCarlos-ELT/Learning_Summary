@@ -140,7 +140,7 @@ print("filter ", precos_produtos3)
 
 #------------------------.env--------------------------------------
 print(" " * _spaces_ +"9- .env")
-# First install pip install python-dotenv
+# First install pip install python-dotenv pip install python-dotenv
 # Sec. Create a file called .env in the project folder with enviroments variables.
 # Write the data in .env file, for example: USUARIO=admin
 from dotenv import load_dotenv
