@@ -1,4 +1,20 @@
 # Python Learning Summary
+"""python --version
+py --list
+where python
+PS Get-Command python
+
+python -m venv venv
+PS .\venv\Scripts\Activate
+cmd .\venv\Scripts\activate
+"""
+
+pip install numpy scipy matplotlib
+
+py -3.12 -m venv .venv ou /path/to/python3.12 -m venv .venv
+
+dir(comando)
+
 _spaces_ = 10
 
 # ------------------------1- Data Types in Python--------------------------------------
