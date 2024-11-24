@@ -9,7 +9,7 @@ PS .\venv\Scripts\Activate
 cmd .\venv\Scripts\activate
 pip install numpy scipy matplotlib
 py -3.12 -m venv .venv ou /path/to/python3.12 -m venv .venv
-dir(comando)"""
+dir(comando) Use to list all methods of a command"""
 import time
 
 
@@ -311,12 +311,9 @@ for i, vendedor23 in enumerate(vendedores):
     print(i)
     #print(vendas[i])
 
-
-"""for vendedor, venda in zip(vendedores, vendas):
+for vendedor, venda in zip(vendedores, vendas):
     print(vendedor)
-    print(venda)"""
-
-
+    print(venda)
 
 # ------------------------17-For-Loop--------------------------------------
 print(" " * _spaces_ + "17- For-Loop")
@@ -324,7 +321,7 @@ lista_produtos = ["iphone", "ipad", "notebook"]
 
 for item in lista_produtos:
     print(item)
-    lista_precos = [1566, 2666, 5666]
+    lista_precos = [1566, 2633, 5633]
 
 for i in range(12):
     print(i)
@@ -351,6 +348,5 @@ elif dia == 7:
 else:
     print("Dia ivalido")
 
-
 end_ = time.time()
-print(f"Total time: {end_ - start:.2f} seconds")
+print(f"Total time: {end_ - start:.4f} seconds")
