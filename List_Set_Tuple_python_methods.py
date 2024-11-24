@@ -255,3 +255,69 @@ print(" " * 20 + "10- Clearing a Set")
 # Removing all elements from the set.
 fruits.clear()
 print("After clear():", fruits)
+
+
+print(" " )
+# ---------------------------Tuple--------------------------------------
+print(" " * 20 + "---------Tuple----------")
+print(" " )
+
+# ------------------------ 1- Creating a Tuple --------------------------------------
+print(" " * 20 + "1- Creating a Tuple")
+# Creating a tuple (immutable sequence).
+my_tuple = (1, 2, 3, 4, 5)
+print("Tuple:", my_tuple)
+
+# ------------------------ 2- Accessing Elements --------------------------------------
+print(" " * 20 + "2- Accessing Elements")
+# Accessing elements by index.
+print("Element at index 1:", my_tuple[1])
+
+# ------------------------ 3- Slicing a Tuple --------------------------------------
+print(" " * 20 + "3- Slicing a Tuple")
+# Slicing a tuple to get a subset.
+sliced_tuple = my_tuple[1:4]
+print("Sliced Tuple:", sliced_tuple)
+
+# ------------------------ 4- Finding Length --------------------------------------
+print(" " * 20 + "4- Finding Length")
+# Using `len()` to find the length of the tuple.
+print("Length:", len(my_tuple))
+
+# ------------------------ 5- Counting Elements --------------------------------------
+print(" " * 20 + "5- Counting Elements")
+# Counting occurrences of an element.
+count = my_tuple.count(2)
+print("Count of 2:", count)
+
+# ------------------------ 6- Finding Index --------------------------------------
+print(" " * 20 + "6- Finding Index")
+# Finding the index of an element.
+index = my_tuple.index(3)
+print("Index of 3:", index)
+
+# ------------------------ 7- Checking Membership --------------------------------------
+print(" " * 20 + "7- Checking Membership")
+# Checking if an element exists in the tuple.
+print("Is 4 in tuple?:", 4 in my_tuple)
+
+# ------------------------ 8- Tuple Concatenation --------------------------------------
+print(" " * 20 + "8- Tuple Concatenation")
+# Concatenating two tuples.
+tuple1 = (1, 2)
+tuple2 = (3, 4)
+concatenated = tuple1 + tuple2
+print("Concatenated Tuple:", concatenated)
+
+# ------------------------ 9- Tuple Unpacking --------------------------------------
+print(" " * 20 + "9- Tuple Unpacking")
+# Unpacking tuple elements into variables.
+a, b, c, d, e = my_tuple
+print("Unpacked:", a, b, c, d, e)
+
+# ------------------------ 10- Nested Tuples --------------------------------------
+print(" " * 20 + "10- Nested Tuples")
+# Creating and accessing nested tuples.
+nested_tuple = ((1, 2), (3, 4))
+print("Nested Tuple:", nested_tuple)
+print("Element [1][1]:", nested_tuple[1][1])
