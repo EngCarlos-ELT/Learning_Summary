@@ -245,7 +245,9 @@ for num in generate_numbers():
 
 # ------------------------13- Environment Variables--------------------------------------
 print(" " * _spaces_ + "11- Environment Variables")
-
+# First install pip install python-dotenv pip install python-dotenv
+# Sec. Create a file called .env in the project folder with enviroments variables.
+# Write the data in .env file, for example: USUARIO=admin
 from dotenv import load_dotenv
 import os
 
