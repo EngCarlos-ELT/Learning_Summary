@@ -7,13 +7,9 @@ PS Get-Command python
 python -m venv venv
 PS .\venv\Scripts\Activate
 cmd .\venv\Scripts\activate
-"""
-
 pip install numpy scipy matplotlib
-
 py -3.12 -m venv .venv ou /path/to/python3.12 -m venv .venv
-
-dir(comando)
+dir(comando)"""
 
 _spaces_ = 10
 
@@ -171,7 +167,7 @@ def calcular_imposto(faturamento: float) -> None:
 if __name__ == "__main__":
     calcular_imposto(200)
 
-# ------------------------6- Other Sections--------------------------------------
+# ------------------------- Other Sections--------------------------------------
 # The rest of the code remains the same, with sections on:
 # - List Comprehensions
 # - Map, Filter, and Reduce
@@ -186,15 +182,15 @@ if __name__ == "__main__":
 
 
 
-# ------------------------7- List Comprehension--------------------------------------
-print(" " * _spaces_ + "5- List Comprehension")
+# ------------------------6- List Comprehension--------------------------------------
+print(" " * _spaces_ + "6- List Comprehension")
 
 faturamentos = [18, 15, 36, 46, 76]
 impostos = [0.5 * f for f in faturamentos]
 print("List comprehension results:", impostos)
 
-# ------------------------8- Map, Filter, Reduce--------------------------------------
-print(" " * _spaces_ + "6- Map, Filter, Reduce")
+# ------------------------7- Map, Filter, Reduce--------------------------------------
+print(" " * _spaces_ + "7- Map, Filter, Reduce")
 
 from functools import reduce
 
@@ -218,22 +214,22 @@ nums = [1, 2, 3, 4]
 product = reduce(lambda x, y: x * y, nums)
 print("Reduce results:", product)
 
-# ------------------------9- Exception Handling--------------------------------------
-print(" " * _spaces_ + "7- Exception Handling")
+# ------------------------8- Exception Handling--------------------------------------
+print(" " * _spaces_ + "8- Exception Handling")
 
 try:
     result = 10 / 0
 except ZeroDivisionError as e:
     print("Exception caught:", e)
 
-# ------------------------10- Context Managers--------------------------------------
-print(" " * _spaces_ + "8- Context Managers")
+# ------------------------9- Context Managers--------------------------------------
+print(" " * _spaces_ + "9- Context Managers")
 
 with open("example.txt", "w") as file:
     file.write("Hello, World!")
 
-# ------------------------11- Decorators--------------------------------------
-print(" " * _spaces_ + "9- Decorators")
+# ------------------------10- Decorators--------------------------------------
+print(" " * _spaces_ + "10- Decorators")
 
 def decorator(func):
     def wrapper(*args, **kwargs):
@@ -249,8 +245,8 @@ def say_hello():
 
 say_hello()
 
-# ------------------------12- Generators--------------------------------------
-print(" " * _spaces_ + "10- Generators")
+# ------------------------11- Generators--------------------------------------
+print(" " * _spaces_ + "11- Generators")
 
 def generate_numbers():
     for i in range(5):
@@ -259,35 +255,35 @@ def generate_numbers():
 for num in generate_numbers():
     print("Generator:", num)
 
-# ------------------------13- Environment Variables--------------------------------------
-print(" " * _spaces_ + "11- Environment Variables")
+# ------------------------12- Environment Variables--------------------------------------
+print(" " * _spaces_ + "12- Environment Variables")
+
+from dotenv import load_dotenv
+import os
 # First install pip install python-dotenv pip install python-dotenv
 # Sec. Create a file called .env in the project folder with enviroments variables.
 # Write the data in .env file, for example: USUARIO=admin
-from dotenv import load_dotenv
-import os
-
 load_dotenv()
 print("Environment Variable (USUARIO):", os.getenv("USUARIO"))
 
-# ------------------------14- Python Modules and Imports--------------------------------------
-print(" " * _spaces_ + "12- Python Modules and Imports")
+# ------------------------13- Python Modules and Imports--------------------------------------
+print(" " * _spaces_ + "13- Python Modules and Imports")
 
 from math import sqrt, pi
 
 print("Square root of 16:", sqrt(16))
 print("Value of Pi:", pi)
 
-# ------------------------15- F-strings--------------------------------------
-print(" " * _spaces_ + "13- F-strings")
+# ------------------------14- F-strings--------------------------------------
+print(" " * _spaces_ + "14- F-strings")
 
 name = "Alice"
 age = 30
 greeting = f"My name is {name} and I am {age} years old."
 print(greeting)
 
-# ------------------------16- Data Structures (Dicts, Sets, Tuples)--------------------------------------
-print(" " * _spaces_ + "14- Data Structures (Dicts, Sets, Tuples)")
+# ------------------------15- Data Structures (Dicts, Sets, Tuples)--------------------------------------
+print(" " * _spaces_ + "15- Data Structures (Dicts, Sets, Tuples)")
 
 # Dictionaries
 inventory = {"apple": 10, "banana": 5, "orange": 7}
@@ -301,3 +297,12 @@ print("Set:", unique_numbers)
 # Tuples
 coordinates = (10.5, 20.3)
 print("Tuple:", coordinates)
+
+# ------------------------16- Enumerators--------------------------------------
+print(" " * _spaces_ + "16- Enumerators")
+
+vendedores = ["Marcus", "Amanda", "Ale", "Carol"]
+vendas = [15, 29, 10, 30]
+for i, vendedor in enumerate(vendedores):
+    print(vendedor)
+    print(vendas[i])
