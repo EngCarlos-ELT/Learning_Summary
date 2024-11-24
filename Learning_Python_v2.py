@@ -348,5 +348,23 @@ elif dia == 7:
 else:
     print("Dia ivalido")
 
+match dia :
+    case 1:
+        print("Domingo")
+    case 2:
+        print("Segunda")
+    case 3:
+        print("Terça")
+    case 4:
+        print("Quarta")
+    case 5:
+        print("QUinta")
+    case 6:
+        print("sexta")
+    case 7:
+        print("sabado")
+    case outro_valor:
+        print("Dia ivalido")
+
 end_ = time.time()
 print(f"Total time: {end_ - start:.4f} seconds")
