@@ -10,7 +10,10 @@ cmd .\venv\Scripts\activate
 pip install numpy scipy matplotlib
 py -3.12 -m venv .venv ou /path/to/python3.12 -m venv .venv
 dir(comando)"""
+import time
 
+
+start = time.time()
 _spaces_ = 10
 
 # ------------------------1- Data Types in Python--------------------------------------
@@ -303,6 +306,51 @@ print(" " * _spaces_ + "16- Enumerators")
 
 vendedores = ["Marcus", "Amanda", "Ale", "Carol"]
 vendas = [15, 29, 10, 30]
-for i, vendedor in enumerate(vendedores):
+for i, vendedor23 in enumerate(vendedores):
+    print(vendedor23)
+    print(i)
+    #print(vendas[i])
+
+
+"""for vendedor, venda in zip(vendedores, vendas):
     print(vendedor)
-    print(vendas[i])
+    print(venda)"""
+
+
+
+# ------------------------17-For-Loop--------------------------------------
+print(" " * _spaces_ + "17- For-Loop")
+lista_produtos = ["iphone", "ipad", "notebook"]
+
+for item in lista_produtos:
+    print(item)
+    lista_precos = [1566, 2666, 5666]
+
+for i in range(12):
+    print(i)
+    #i = 5
+
+# ------------------------18-Switch/Case--------------------------------------
+print(" " * _spaces_ + "18-Switch/Case")
+dia = 2
+
+if dia == 1:
+    print("Domingo")
+elif dia == 2:
+    print("Segunda")
+elif dia == 3:
+    print("Terça")
+elif dia == 4:
+    print("Quarta")
+elif dia == 5:
+    print("QUinta")
+elif dia == 6:
+    print("sexta")
+elif dia == 7:
+    print("sabado")
+else:
+    print("Dia ivalido")
+
+
+end_ = time.time()
+print(f"Total time: {end_ - start:.2f} seconds")
