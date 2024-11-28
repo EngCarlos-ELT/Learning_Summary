@@ -16,7 +16,7 @@ into other modules, You can use the special __all__ attribute in __init__.py to 
 from pacote import * .
 relative import
 prospector
-memory profiler
+memory profiler, timeit, %timeit, repeat
 """
 import time
 
