@@ -17,6 +17,7 @@ from pacote import * .
 relative import
 prospector
 memory profiler, cProfiler, snakeviz timeit, %timeit, repeat
+Common folders: src(model, view, controller), test, docs
 """
 import time
 
