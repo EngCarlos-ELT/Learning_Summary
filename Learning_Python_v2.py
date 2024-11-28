@@ -9,7 +9,12 @@ PS .\venv\Scripts\Activate
 cmd .\venv\Scripts\activate
 pip install numpy scipy matplotlib
 py -3.12 -m venv .venv ou /path/to/python3.12 -m venv .venv
-dir(comando) Use to list all methods of a command"""
+dir(comando) Use to list all methods of a command
+*in import does not need to declare the class. and . indicates the base folder of the project, .. returns 2 directories.
+The __init__.py file transforms a directory into a Python package, allowing the contents of that directory to be imported into other modules.
+relative import
+prospector
+"""
 import time
 
 
