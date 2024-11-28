@@ -376,7 +376,7 @@ match dia :
 
 
 # ------------------------19-Dataclasses--------------------------------------
-print(" " * _spaces_ + "19-Dataclasses")
+print(" " * _spaces_ + "19-Dataclasses") #To create classes to storage data.
 
 from dataclasses import dataclass
 
