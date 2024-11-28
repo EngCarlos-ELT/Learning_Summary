@@ -374,5 +374,30 @@ match dia :
     case outro_valor:
         print("Dia ivalido")
 
+
+# ------------------------19-Dataclasses--------------------------------------
+print(" " * _spaces_ + "19-Dataclasses")
+
+from dataclasses import dataclass
+
+@dataclass
+class Pessoa:
+    nome: str
+    idade: int
+    ativo: bool = True  # Atributo com valor padrão
+
+# Criando instâncias
+p1 = Pessoa(nome="Alice", idade=30)
+p2 = Pessoa(nome="Bob", idade=25, ativo=False)
+
+print(p1)  # Output: Pessoa(nome='Alice', idade=30, ativo=True)
+print(p2)  # Output: Pessoa(nome='Bob', idade=25, ativo=False)
+
+# Comparação
+print(p1 == p2)  # Output: False
+
+
+
+
 end_ = time.time()
 print(f"Total time: {end_ - start:.4f} seconds")
