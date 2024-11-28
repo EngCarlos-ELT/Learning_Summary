@@ -18,6 +18,36 @@ relative import
 prospector
 memory profiler, cProfiler, snakeviz timeit, %timeit, repeat
 Common folders: src(model, view, controller), test, docs
+
+project_name/
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── setup.py
+├── LICENSE
+├── docs/
+│   └── ...  # Documentation files
+├── src/
+│   ├── project_name/
+│   │   ├── __init__.py
+│   │   ├── module1.py
+│   │   ├── module2.py
+│   │   ├── subpackage/
+│   │   │   ├── __init__.py
+│   │   │   ├── submodule1.py
+│   │   │   └── submodule2.py
+│   └── tests/
+│       ├── __init__.py
+│       ├── test_module1.py
+│       ├── test_module2.py
+│       └── subpackage/
+│           ├── __init__.py
+│           ├── test_submodule1.py
+│           └── test_submodule2.py
+└── scripts/
+    ├── script1.py
+    └── script2.py
+
 """
 import time
 
