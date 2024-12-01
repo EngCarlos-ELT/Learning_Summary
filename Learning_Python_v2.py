@@ -564,9 +564,58 @@ Break down more complex patterns into smaller parts for incremental validation.
 
 
 
+# ---------------------------------------------21-yield--------------------------------------------------------
+print(" " * _spaces_ + "21-yield") 
+    
+#The yield keyword in Python is used in a generator function to produce a value and pause the function's execution,
+#preserving its state for resumption. This allows efficient handling of sequences or data streams without storing all the data in memory at once.
+
+#When a function contains yield, it becomes a generator function. Instead of returning a single value and exiting,
+#the function can produce a series of values, one at a time, as the generator object is iterated.
+
+#Key Advantages of yield
+#Memory Efficiency: It generates values on the fly, which is ideal for working with large datasets or infinite sequences
+#State Retention: The generator function retains its state between calls, avoiding repeated computations.
+"""                                                   
+Key Differences Between yield and return
+Aspect        	    yield        	                        return
+Behavior	        Pauses the function and resumes later.	Exits the function.
+Function Type	    Turns the function into a generator.	Regular function.
+Usage in Iteration	Produces a sequence of values lazily.	Produces a single value.
+"""
+def simple_generator():
+    yield 4
+    yield 7
+    yield 9
+
+gen = simple_generator()
+print(next(gen))  # Output: 4
+print(next(gen))  # Output: 7
+print(next(gen))  # Output: 9
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                   
 
 
 end_ = time.time()
