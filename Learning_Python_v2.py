@@ -583,18 +583,22 @@ Behavior	        Pauses the function and resumes later.	Exits the function.
 Function Type	    Turns the function into a generator.	Regular function.
 Usage in Iteration	Produces a sequence of values lazily.	Produces a single value.
 """
+#this code below print each yield value.
 def simple_generator():
     yield 4
     yield 7
     yield 9
-
 gen = simple_generator()
 print(next(gen))  # Output: 4
 print(next(gen))  # Output: 7
 print(next(gen))  # Output: 9
 
-
-
+#this code below print each line of the vendas.csv file.
+def ler_csvlnome_arquivdjz
+    yield from open(nome_arquivo, "r")
+vendas = ler_csv("vendas.csv")
+for venda in vendas:
+    print(venda)
 
 
 
