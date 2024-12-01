@@ -444,13 +444,25 @@ project/
 #If you want to import utils.py into main.py but module/ is not in sys.path, the lines above allow you to include module/ in the module search path:
 
 # main.py
-import sys
-from pathlib import Path
-file = Path(__file__).resolve()
-parent, root = file.parent, file.parents[1]  # Goes up 1 level
-sys.path.append(str(root))
-
-from module.utils import my_function
+import sys  
+# Imports the `sys` module, which provides access to system-specific parameters and functions, including `sys.path`.
+from pathlib import Path  
+# Imports the `Path` class from the `pathlib` module. `Path` is used for object-oriented file and directory manipulation.
+file = Path(__file__).resolve()  
+# Creates a `Path` object representing the current file (`__file__`) and resolves it to its absolute path.  
+# `__file__` is a special variable that holds the path to the script being executed.  
+# `resolve()` ensures that the path is absolute and resolves any symbolic links.
+parent, root = file.parent, file.parents[1]  
+# `file.parent` retrieves the directory containing the current file.  
+# `file.parents[1]` navigates up one level in the directory tree (to the grandparent directory).  
+# Assigns these two directories to the variables `parent` and `root`.
+sys.path.append(str(root))  
+# Converts `root` (the grandparent directory) to a string and appends it to `sys.path`.  
+# `sys.path` is a list of directories that Python searches for modules when importing.  
+# Adding `root` ensures that Python can locate modules in the grandparent directory.
+from module.utils import my_function  
+# Imports the `my_function` function from the `utils` module, which is located in the `module` directory.  
+# This import works because `root` (which includes the `module` directory) has been added to `sys.path`.
 
 #This way, you can use my_function normally.
 
