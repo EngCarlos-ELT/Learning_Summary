@@ -429,6 +429,31 @@ print(p1 == p2)  # Output: False
 
 
 
+# ------------------------20-Include modules from directories--------------------------------------
+print(" " * _spaces_ + "20-Include modules from directories") 
+#These lines are used to configure the execution environment to
+#include modules from parent or ancestor directories in the project.
+#This is especially useful in large projects with multiple folders.
+
+#Consider the following project structure:
+project/
+├── main.py
+├── module/
+│   └── utils.py
+
+#If you want to import utils.py into main.py but module/ is not in sys.path, the lines above allow you to include module/ in the module search path:
+
+# main.py
+import sys
+from pathlib import Path
+file = Path(__file__).resolve()
+parent, root = file.parent, file.parents[1]  # Goes up 1 level
+sys.path.append(str(root))
+
+from module.utils import my_function
+
+#This way, you can use my_function normally.
+
 
 end_ = time.time()
 print(f"Total time: {end_ - start:.4f} seconds")
