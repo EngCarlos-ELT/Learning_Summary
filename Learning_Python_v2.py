@@ -431,6 +431,7 @@ print(p1 == p2)  # Output: False
 
 # ------------------------20-Include modules from directories--------------------------------------
 print(" " * _spaces_ + "20-Include modules from directories") 
+
 #These lines are used to configure the execution environment to
 #include modules from parent or ancestor directories in the project.
 #This is especially useful in large projects with multiple folders.
@@ -465,6 +466,107 @@ from module.utils import my_function
 # This import works because `root` (which includes the `module` directory) has been added to `sys.path`.
 
 #This way, you can use my_function normally.
+
+
+# ------------------------21-Regular expressions--------------------------------------
+print(" " * _spaces_ + "21-Regular expressions") 
+
+
+#Regular expressions in Python are a powerful tool for finding, analyzing, and manipulating text based on specific patterns.
+#They are accessed through the re module in the standard library.
+
+Main Functions in the re Module
+1->re.match()
+#Checks if the pattern matches the beginning of the string.
+
+text = "Hello, world!"
+result = re.match(r"Hello", text)
+print(result)  # Output: <re.Match object>
+
+2->re.search()
+#Searches for the pattern anywhere in the string.
+
+text = "Welcome to the Python world!"
+result = re.search(r"world", text)
+print(result.group())  # Output: "world"
+
+3->re.findall()
+#Returns all occurrences of the pattern in a list.
+
+text = "The number 42 appears here 42 times."
+result = re.findall(r"\d+", text)  # Looks for digits
+print(result)  # Output: ['42', '42']
+
+4->re.finditer()
+#Similar to findall, but returns an iterator of Match objects.
+
+text = "abc123xyz456"
+for match in re.finditer(r"\d+", text):
+    print(match.group())  # Output: 123 and 456
+5->re.sub()
+#Replaces all occurrences of the pattern with a new string.
+
+text = "Hello, world!"
+new_text = re.sub(r"world", "Python", text)
+print(new_text)  # Output: "Hello, Python!"
+
+#Key Metacharacters
+.: Any character (except newline).
+^: Start of the string.
+$: End of the string.
+*: Zero or more occurrences.
++: One or more occurrences.
+?: Zero or one occurrence.
+[]: Character class.
+E.g., [a-z] (any lowercase letter from a to z).
+|: OR.
+E.g., a|b (matches a or b).
+\d: A digit (equivalent to [0-9]).
+\w: An alphanumeric character or underscore.
+\s: A whitespace character.
+
+#--------------------------------------Examples of Usage------------------------
+#1->Validating an Email
+email = "example@domain.com"
+pattern = r"^[\w\.-]+@[\w\.-]+\.\w+$"
+result = re.match(pattern, email)
+print(bool(result))  # Output: True
+
+#2->Extracting Numbers from Text
+text = "Temperatures were 20°C yesterday and 25°C today."
+numbers = re.findall(r"\d+", text)
+print(numbers)  # Output: ['20', '25']
+
+#3->Replacing Words
+text = "Python is amazing!"
+new_text = re.sub(r"amazing", "fantastic", text)
+print(new_text)  # Output: "Python is fantastic!"
+
+#4->Splitting Words in a Sentence
+sentence = "Python is amazing and powerful."
+words = re.split(r"\s", sentence)  # Splits by spaces
+print(words)  # Output: ['Python', 'is', 'amazing', 'and', 'powerful.']
+
+#---------Common Flags in Regular Expressions-------
+re.IGNORECASE (re.I): Ignores case sensitivity.
+re.MULTILINE (re.M): Allows ^ and $ to match the start and end of each line.
+re.DOTALL (re.S): Makes . match newlines.
+
+#Example with a flag:
+text = "Python is Powerful.\nAnd amazing!"
+result = re.findall(r"^And", text, flags=re.MULTILINE)
+print(result)  # Output: ['And']
+
+#---------Tips for Working with Regular Expressions--------
+Use online tools to test patterns, such as regex101.com.
+Keep patterns clear and well-commented to improve readability.
+Break down more complex patterns into smaller parts for incremental validation.
+
+
+
+
+
+
 
 
 end_ = time.time()
