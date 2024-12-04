@@ -600,24 +600,64 @@ vendas = ler_csv("vendas.csv")
 for venda in vendas:
     print(venda)
 
+# ---------------------------------------------22-Dependency injection--------------------------------------------------------
+print(" " * _spaces_ + "22-Dependency injection") 
 
+#Dependency injection is a design technique that allows objects to receive their dependencies from external sources rather than
+#creating them internally. This promotes more modular, flexible, and testable code.
+#In Python, dependency injection can be implemented in several ways, including:
+#Constructor Injection: Dependencies are passed as parameters when the object is created.
 
+python
+Copiar código
+class Repository:
+    def get_data(self):
+        pass
 
+class Service:
+    def __init__(self, repository: Repository):
+        self.repository = repository
 
+    def process_data(self):
+        data = self.repository.get_data()
+        # Process the data
+#Method Injection: Dependencies are provided through specific methods.
 
+python
+Copiar código
+class Service:
+    def __init__(self):
+        self.repository = None
 
+    def set_repository(self, repository: Repository):
+        self.repository = repository
 
+    def process_data(self):
+        if not self.repository:
+            raise ValueError("Repository not set.")
+        data = self.repository.get_data()
+        # Process the data
+#Property Injection: Dependencies are assigned directly to object properties.
 
+python
+Copiar código
+class Service:
+    def __init__(self):
+        self._repository = None
 
+    @property
+    def repository(self):
+        if not self._repository:
+            raise ValueError("Repository not set.")
+        return self._repository
 
+    @repository.setter
+    def repository(self, repository: Repository):
+        self._repository = repository
 
-
-
-
-
-
-
-
+    def process_data(self):
+        data = self.repository.get_data()
+        # Process the data
 
                                                    
 
