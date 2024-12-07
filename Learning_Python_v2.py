@@ -3,6 +3,8 @@
 py --list
 where python
 PS Get-Command python
+Extensions: python, material icon, code runner, Python Environment Manager, SQLite Viewer
+
 ----------------------------------------venv---------------------------------
 pip install virtualenv
 virtualenv venv
