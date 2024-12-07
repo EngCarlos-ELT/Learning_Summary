@@ -4,6 +4,7 @@ py --list
 where python
 PS Get-Command python
 Extensions: python, material icon, code runner, Python Environment Manager, SQLite Viewer
+Configs: autosave
 
 ----------------------------------------venv---------------------------------
 pip install virtualenv
