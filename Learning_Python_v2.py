@@ -3,6 +3,23 @@
 py --list
 where python
 PS Get-Command python
+----------------------------------------venv---------------------------------
+pip install virtualenv
+virtualenv venv
+venv\Scripts\activate
+deactivate
+ckeck:
+ps  Get-ExecutionPolicy
+
+python -m venv venv
+cmd venv\Scripts\activate
+ps .\venv\Scripts\activate
+deactivate
+ckeck:
+ps Get-ExecutionPolicy
+---------------------------------------------------------------------------
+
+
 
 python -m venv venv
 PS .\venv\Scripts\Activate
@@ -853,6 +870,8 @@ numeros.sort(reverse=True)
 print("Lista original:", lista)
 print("Lista ordenada:", lista_ordenada)
 print("Lista ordenada:", numeros)
+
+
 
 
 
