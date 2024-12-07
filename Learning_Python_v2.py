@@ -608,8 +608,6 @@ print(" " * _spaces_ + "22-Dependency injection")
 #In Python, dependency injection can be implemented in several ways, including:
 #Constructor Injection: Dependencies are passed as parameters when the object is created.
 
-python
-Copiar código
 class Repository:
     def get_data(self):
         pass
@@ -623,8 +621,7 @@ class Service:
         # Process the data
 #Method Injection: Dependencies are provided through specific methods.
 
-python
-Copiar código
+
 class Service:
     def __init__(self):
         self.repository = None
@@ -664,3 +661,198 @@ class Service:
 
 end_ = time.time()
 print(f"Total time: {end_ - start:.4f} seconds")
+
+
+
+# ---------------------------------------------23-Reserved Words--------------------------------------------------------
+print(" " * _spaces_ + "23-Reserved Words") 
+
+Operadores e Palavras Reservadas em Python
+1. Operadores em Python
+1.1 Operadores Aritméticos
++ : Adição
+- : Subtração
+* : Multiplicação
+/ : Divisão
+%  : Módulo (resto)
+** : Exponenciação
+// : Divisão inteira
+1.2 Operadores de Comparação
+== : Igual a
+!= : Diferente de
+> : Maior que
+< : Menor que
+>= : Maior ou igual a
+<= : Menor ou igual a
+1.3 Operadores Lógicos
+and : E lógico
+or : Ou lógico
+not : Não lógico
+1.4 Operadores Bitwise
+& : AND bit a bit
+| : OR bit a bit
+^ : XOR bit a bit
+~ : NOT bit a bit
+<< : Deslocamento para a esquerda
+>> : Deslocamento para a direita
+1.5 Operadores de Atribuição
+= : Atribuição
++= : Soma e atribui
+-= : Subtrai e atribui
+*= : Multiplica e atribui
+/= : Divide e atribui
+%= : Calcula o módulo e atribui
+**= : Exponencia e atribui
+//= : Divisão inteira e atribui
+&= : AND bit a bit e atribui
+|= : OR bit a bit e atribui
+^= : XOR bit a bit e atribui
+<<= : Desloca à esquerda e atribui
+>>= : Desloca à direita e atribui
+1.6 Operadores de Identidade
+is : Retorna True se os objetos comparados forem o mesmo.
+is not : Retorna True se os objetos comparados não forem o mesmo.
+1.7 Operadores de Associação
+in : Retorna True se o valor estiver presente em uma sequência.
+not in : Retorna True se o valor não estiver presente em uma sequência.
+1.8 Operadores Especiais
+= : Operador de atribuição.
+-> : Indica o tipo de retorno em anotações de função.
+2. Palavras Reservadas do Python
+As palavras reservadas do Python não podem ser usadas como identificadores.
+False
+None
+True
+and
+as
+assert
+async
+await
+break
+class
+continue
+def
+del
+elif
+else
+except
+finally
+for
+from
+global
+if
+import
+in
+is
+lambda
+nonlocal
+not
+or
+pass
+raise
+return
+try
+while
+with
+yield
+3. Como Usar Palavras Reservadas no Código Python
+### 3.1 Booleanos
+Exemplo com True e False:
+is_active = True
+if not is_active:
+    print("Inativo!")
+### 3.2 Controle de Fluxo
+Exemplo com if, elif e else:
+x = 10
+if x > 5:
+    print("Maior que 5")
+elif x == 5:
+    print("Igual a 5")
+else:
+    print("Menor que 5")
+Exemplo com loops:
+for i in range(3):
+    print(i)
+
+count = 0
+while count < 3:
+    print(count)
+    count += 1
+### 3.3 Tratamento de Exceções
+Exemplo com try, except e finally:
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Erro: Divisão por zero!")
+finally:
+    print("Fim do bloco try.")
+### 3.4 Funções e Classes
+Função com 'def':
+def saudacao(nome):
+    return f"Olá, {nome}!"
+print(saudacao("Maria"))
+Classe com 'class':
+class Pessoa:
+    def __init__(self, nome):
+        self.nome = nome
+
+p = Pessoa("João")
+print(p.nome)
+
+5. Gerenciamento de Recursos
+with open("arquivo.txt", "w") as arquivo:
+    arquivo.write("Olá, mundo!")
+6. Namespace e Escopo
+Global:
+x = 10
+def modificar_global():
+    global x
+    x = 20
+
+modificar_global()
+print(x)
+Nonlocal:
+def func_externa():
+    x = 5
+    def func_interna():
+        nonlocal x
+        x += 1
+    func_interna()
+    print(x)
+func_externa()
+
+7. Funções Lambda e Async
+Lambda:
+quadrado = lambda x: x ** 2
+print(quadrado(4))
+
+Async:
+import asyncio
+
+async def saudar():
+    await asyncio.sleep(1)
+    print("Olá!")
+
+asyncio.run(saudar())
+
+
+
+
+# ---------------------------------------------24-List Ordenation--------------------------------------------------------
+print(" " * _spaces_ + "24-List Ordenation") 
+
+# Listas de exemplo
+lista = ["banana", "maçã", "laranja", "uva", "abacaxi"]
+numeros = [42, 5, 18, 99, 23, 1]
+
+# Ordenando as listas em ordem alfabética
+lista_ordenada = sorted(lista, reverse=True)
+lista.sort()
+numeros.sort(reverse=True)
+# Exibindo a lista original e a lista ordenada
+print("Lista original:", lista)
+print("Lista ordenada:", lista_ordenada)
+print("Lista ordenada:", numeros)
+
+
+
